@@ -15,4 +15,8 @@
 
 ![Proc sgplot:  Histogram](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/SAS/Prod_sgplot_Histogram.png)
 
-![Proc sgplot: Scatter Plot](
+![Proc Gchart: Pie](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/SAS/Proc_gchart_Pie.png)
+
+![Proc Gchart:  Donut Pie](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/SAS/Proc_Gchart_DonutPie.png)
+
+![Proc sgplot: Scatter Plot](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/SAS/Proc_sgplot_ScatterPlot.png)
