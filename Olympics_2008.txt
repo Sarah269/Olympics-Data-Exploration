@@ -1,0 +1,102 @@
+--Data Exploration
+--Oracle Live SQL Olympics database
+--Oracle Database 19c
+--Olym.olym_medals_view. 29215 records.
+--View has data from 1896 to 2008 Olympics
+--Focused on 2008 Summer Olympics. 2042 records
+
+
+--Which country received the most medals in the 2008 Olympics?
+select edition as Olympics, noc as ctry , num_medals, 'Received the most medals' as Type_Desc from (
+select edition, noc, count(*) as num_medals,
+    rank() over(partition by edition order by count(*) desc) as medal_rank
+from olym.olym_medals_view 
+where edition = 2008 
+group by edition, noc
+order by num_medals desc)
+where medal_rank = 1
+;
+
+
+--for each medal category, which country received the most medals?
+select edition as Olympics, medal, noc as ctry, num_medals, 'Received the most medals in this category' as Type_Desc
+from (
+select edition, medal, noc, count(*) as num_medals
+,rank() over(partition by edition, medal order by count(*) desc) as medal_rank
+from olym.olym_medals_view 
+where edition = 2008 
+group by edition, medal, noc
+order by medal)
+where medal_rank = 1
+;
+
+--Countries that received medals in multiple medal categories (gold, silver, bronze)
+--For each sport rank countries by number of medals received
+WITH CTE1 AS (
+select edition, sport, medal, noc, count(*) as num_medals
+,rank() over(partition by edition, sport, medal order by count(*) desc) as medal_rank
+from olym.olym_medals_view 
+where edition = 2008 
+group by edition, sport, medal, noc
+order by medal
+ ) 
+-- for each sport and medal category, select countries that ranked number one in number of medals
+,  CTE2 AS (
+select * from CTE1
+where medal_rank=1
+order by edition, sport, medal
+)
+
+Select edition as Olympics, sport, noc as ctry, count(*) as medal_cat,'Most medals in multiple medal categories' as Type_Desc
+from CTE2
+group by edition, sport, noc
+having count(*) >1
+;
+
+--Countries that received the most medals in each medal category for a sport
+WITH CTE1 AS (
+select edition, sport, medal, noc, count(*) as num_medals
+,rank() over(partition by edition, sport, medal order by count(*) desc) as medal_rank
+from olym.olym_medals_view 
+where edition = 2008 
+group by edition, sport, medal, noc
+order by medal
+ ) 
+-- for each sport and medal category, select countries that ranked number one in number of medals
+,  CTE2 AS (
+select * from CTE1
+where medal_rank=1
+order by edition, sport, medal
+)
+--Country that won gold, silver, and bronze in a sport
+Select edition as Olympics, sport, noc as ctry, 'Dominated sport. Top medal winner for gold, silver, & bronze' as Type_Desc
+from CTE2
+group by edition, sport, noc
+having count(*) =3;
+
+
+--Athletes with the most medals
+With CTE3 AS (
+select edition, gender, athlete, noc, count(medal) as num_medals
+, RANK() OVER( partition by edition, gender ORDER BY Count(*) desc) as medal_rank
+from olym.olym_medals_view
+where edition = 2008 
+group by edition, gender, athlete, noc
+order by medal_rank)
+    
+select edition, gender, athlete, noc, num_medals, medal_rank, 'Athlete with most medals By Gender' as Type_Desc
+from CTE3
+where medal_rank =1
+order by edition, gender, medal_rank;
+
+--First year women are recorded as participating as athletes
+select edition as Olympics, noc as CTRY, gender, sport, count(*), 'First year women are recorded as participants' as Type_Desc
+from olym.olym_medals_view
+where gender = 'Women'
+and edition in  (select min(edition) from olym.olym_medals_view where gender='Women')
+group by edition, noc, gender, sport;
+
+
+
+
+    

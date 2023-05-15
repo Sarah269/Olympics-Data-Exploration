@@ -1,0 +1,164 @@
+--Add population data and country name to olym_medals_view data
+--Oracle Live SQL World Population table. 215 records
+--Contains world population figures from 1960 to 2012
+
+--Join olym_medals_view to world_population to get population and country name
+select distinct b.country_code, b.country, b."2008" as pop_2008,
+a.edition as olympics, a.sport, a.discipline, a.event, a.gender, a.medal
+from olym.olym_medals_view a
+left join world.world_population b
+on a.noc = b.country_code
+where a.edition = 2008
+order by b.country_code;
+
+--number of records in join.  Record should be 2042
+select count(*)
+from olym.olym_medals_view a
+left join world.world_population b
+on a.noc = b.country_code
+where a.edition = 2008
+order by b.country_code;
+
+
+--Any country codes not in the world population table. 26
+select distinct a.noc, b.country_code, b.country, b."2008" as pop_2008,
+a.edition as olympics
+from olym.olym_medals_view a
+left join world.world_population b
+on a.noc = b.country_code
+where a.edition = 2008
+and noc not in (select distinct country_code from world.world_population)   
+order by b.country_code; 
+
+--Number of records to update.285
+select count(*)
+from olym.olym_medals_view 
+where edition = 2008
+and noc not in (select distinct country_code from world.world_population);     
+ 
+--IOC. International Olympic Committee
+--ISO.  International Organization for Standardization
+--IOC country codes change and/or are sometimes different from the standard ISO 3166 codes
+
+--Drop ioc_ctry_code
+drop table ioc_ctry_code;
+
+--Create a table with missing IOC country codes
+Create table IOC_CTRY_CODE (
+    IOC_CTRY_CD varchar2(3) primary key,
+    IOC_CTRY_NM varchar2(60),
+    IOC_2008_POP numeric
+);
+
+--Insert values into IOC_CTRY_CODE table
+--Obtained population figures from  populationpyramid.net
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('GER', 'Germany',81217481);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('SLO', 'Slovenia',2034032);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('SUD', 'Sudan', 32065240);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('TPE', 'Chinese Taipei',2646869);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('DEN', 'Denmark', 5502751);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP) 
+    values ('INA', 'Indonesia',237936543);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('MGL', 'Mongolia',2633887);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('BUL', 'Bulgaria',7674913);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('NED', 'Netherlands', 1392802);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('TRI', 'Trinidad and Tobago',1392802);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('RSA', 'South Africa', 50565811);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('POR', 'Portugal', 10580960);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('MAS', 'Malalysia', 27664295);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('ZIM', 'Zimbabwe', 12550347);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('BAH', 'Bahamas', 362794);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('NGR', 'Nigeria',152382505);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('GRE', 'Greece', 11073623);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('MRI', 'Mauritius', 1275683);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('VIE', 'Vietnam', 85597241);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('CRO', 'Croatia', 4393664);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('SUI', 'Switerzerland', 7638288);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('ALG', 'Algeria', 34569591);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('SIN', 'Singapore', 4838402);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('LAT', 'Latvia',2150412);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('TOG', 'Togo',6222482);
+INSERT into IOC_CTRY_CODE (IOC_CTRY_CD, IOC_CTRY_NM,IOC_2008_POP)
+    values ('IRI', 'Iran', 73318393);
+
+--View ioc_ctry_code.  Record count should be 26
+Select * from IOC_CTRY_CODE;
+
+
+--Create a table that joins Olympic view and world population data
+drop table olym_medals_pop;
+
+Create table olym_medals_pop AS
+(select  a.noc, b.country_code, b.country, b."2008" as pop_2008,
+a.edition as olympics, a.sport, a.discipline, a.event, a.gender, a.medal
+from olym.olym_medals_view a
+left join world.world_population b
+on a.noc = b.country_code
+where a.edition = 2008);
+
+--Check record count
+select count(*) from olym_medals_pop;
+
+--Check number of country_code records missing country_code & population
+select noc, country_code, country, pop_2008
+from olym_medals_pop
+where country_code is null;
+
+
+--Update country data with missing values using ioc_ctry_code
+merge into olym_medals_pop x
+    using ioc_ctry_code y
+    on (x.noc = y.ioc_ctry_cd)
+    when matched then
+    update set x.country_code = y.ioc_ctry_cd,
+    x.pop_2008 = y.ioc_2008_pop,
+    x.country = y.ioc_ctry_nm
+    where x.country_code is null;
+
+--Check merge update results
+select noc, country_code, country, pop_2008,
+olympics
+from olym_medals_pop 
+where noc in ('SLO','RSA', 'LAT', 'TPE', 'SUI', 'IRI', 'GER')
+order by noc;
+
+
+select count(*) from olym_medals_pop;
+
+--Check all noc codes have country code populated
+select noc, country_code, country, pop_2008
+from olym_medals_pop
+where country_code is null;
+
+--Extract of Medals won by country and gender
+select country_code, country, pop_2008, sport, gender, medal
+from olym_medals_pop
+order by country_code, sport;
+
+
+
+-
