@@ -12,7 +12,7 @@ Tasks performed:
 - Data Exploration using Oracle Live SQL.  
 - Added country and country population data using Oracle Live SQL.
 - Extracted data for import into SAS Studio.
-- Generated graphs and macro report using SAS Studio.
+- [Generated Graphs & Macro using SAS Studio](https://github.com/Sarah269/Olympics-Data-Exploration/tree/main/SAS)
 
 ![Country with Most Medals](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/CountryMostMedals.png)
 
