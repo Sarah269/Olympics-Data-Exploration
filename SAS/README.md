@@ -2,6 +2,7 @@
 - Imported csv extract file into SAS Studio.
 - Ran Proc Import, Proc Means, Proc Freq, and Proc Univariate.
 - Generated graphs using Proc gchart and sgplot.
+- Created a macro to generate proc freq report based on country name parameter.
 
 ![Proc Means](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/SAS/Proc_Means.png)
 
@@ -20,3 +21,5 @@
 ![Proc Gchart:  Donut Pie](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/SAS/Proc_Gchart_DonutPie.png)
 
 ![Proc sgplot: Scatter Plot](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/SAS/Proc_sgplot_ScatterPlot.png)
+
+![](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/SAS/SAS%20Macro%20Report.png)
