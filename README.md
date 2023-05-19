@@ -13,6 +13,7 @@ Tasks performed:
 - Added country and country population data using SQL.
 - Extracted data for import into SAS Studio.
 - Generated graphs using SAS Studio.
+- Generated proc freq report using SAS macro.
 
 ![Country with Most Medals](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/CountryMostMedals.png)
 
@@ -24,5 +25,5 @@ Tasks performed:
 
 ![Earliest Year Women Participated in Olympics](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/FirstYearWomenInOlympics.png
 )
-![Proc Freq](
+![SAS macro report](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/SAS/SAS%20Macro%20Report.png)
 
