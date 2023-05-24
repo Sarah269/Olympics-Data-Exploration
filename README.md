@@ -26,6 +26,6 @@ Tasks performed:
 ![Earliest Year Women Participated in Olympics](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/FirstYearWomenInOlympics.png
 )
 
-![]
+![](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/2008%20Beijing%20Summer%20Olympics%20Dashboard.png)
 
 
