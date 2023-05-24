@@ -13,6 +13,7 @@ Tasks performed:
 - Added country and country population data using Oracle Live SQL.
 - Extracted data for import into SAS Studio.
 - [Generated Graphs & Macro using SAS Studio](https://github.com/Sarah269/Olympics-Data-Exploration/tree/main/SAS)
+- Created Beijing Summer Olympics 2008 Dashboard
 
 ![Country with Most Medals](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/CountryMostMedals.png)
 
@@ -24,5 +25,7 @@ Tasks performed:
 
 ![Earliest Year Women Participated in Olympics](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/FirstYearWomenInOlympics.png
 )
+
+![]
 
 
