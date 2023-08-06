@@ -9,7 +9,7 @@ This is a Data Exploration project using Summer 2008 Olympics data.
 - Focused on 2008 Summer Olympics. 2042 records
 
 Tasks performed:
-- Data Exploration using Oracle Live SQL.  
+- Data Exploration using Oracle Live SQL. (https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/Olympics_2008.txt) 
 - Added country and country population data using Oracle Live SQL.
 - Extracted data for import into SAS Studio.
 - [Generated Graphs & Macro using SAS Studio](https://github.com/Sarah269/Olympics-Data-Exploration/tree/main/SAS)
