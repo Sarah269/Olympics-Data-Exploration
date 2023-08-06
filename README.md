@@ -26,6 +26,8 @@ Tasks performed:
 ![Earliest Year Women Participated in Olympics](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/FirstYearWomenInOlympics.png
 )
 
+![Link to Google Sheets Dashboard.  Note:  Slicer in published Google Sheets does not work](https://docs.google.com/spreadsheets/d/e/2PACX-1vScanjk8mnGe3YtY7f1A2N_IT7hExvzLxU7XTkqnoWtmKatz6SerUuaPFQ9BR5uI1YrlOU8sTFLyRhm/pubhtml?gid=1143705166&single=true)
+
 ![](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/2008%20Beijing%20Summer%20Olympics%20Dashboard.png)
 
 
