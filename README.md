@@ -25,17 +25,29 @@ Observations:
 - China and Germany were the only countries to earned gold, silver, and bronze in a sport.
 <br></br>
 <br></br>
-  
+
+<p>This table shows the country that received the most medals in the 2008 Beijing Olympics.  The United States received the most medals.</p>
+
 ![Country with Most Medals](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/CountryMostMedals.png)
+
+<p>This table identifies the countries who received the most medals in each medal category and the number of medals received.  The United States received the most Gold, Silver, and Bronze medals.</p>
 
 ![Country with Most Gold, Silver, & Bronze Medals](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/CountryMostGoldSilverBronze.png)
 
+<p>This table shows countries that won the gold, silver, and bronze medals in a sport.   China dominated Badminton.  Germany dominated Canoe/Kayak.</p>
+
 ![Country Dominated Sport Winning Gold, Silver, & Bronze](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/CountryWonGoldSilverBronzeInSport.png)
+
+<p> This table shows countries who won multiple medals in a sport.</p>
 
 ![Countries Won Medals in Multiple Categories in a Sport](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/CountryMultipleMedalsInSport.png)
 
+<p>This table shows the first year women participated in the modern Olympics based on the data.  The table only shows medal winners.  It seems women only participated in two sports:  Tennis and Golf.  The Olympics from 1896 to 1904 allowed individuals in a team from different nations.  ZZX signifies a mixed team.</p>
+
 ![Earliest Year Women Participated in Olympics](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/FirstYearWomenInOlympics.png
 )
+
+<p>This is a screenshot of the Google Sheets dashboard. Click on Created Beijing Summer Olympics 2008 Dashboard text under "Tasks performed" to view the dashboard. </p>
 
 ![](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/2008%20Beijing%20Summer%20Olympics%20Dashboard.png)
 
