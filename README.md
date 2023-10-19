@@ -15,14 +15,14 @@ Tasks performed:
 - Added country and country population data using Oracle Live SQL.
 - Extracted data for import into SAS Studio.
 - [Generated Graphs & Macro using SAS Studio](https://github.com/Sarah269/Olympics-Data-Exploration/tree/main/SAS)
-- [Created Beijing Summer Olympics 2008 Dashboard.  Note:  Slicer does not work in published sheets. ](https://docs.google.com/spreadsheets/d/e/2PACX-1vScanjk8mnGe3YtY7f1A2N_IT7hExvzLxU7XTkqnoWtmKatz6SerUuaPFQ9BR5uI1YrlOU8sTFLyRhm/pubhtml?gid=1143705166&single=true)
+- [Created Beijing Summer Olympics 2008 Medal Winners Dashboard.](https://public.tableau.com/views/BeijingSummerOlympics2008/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
 
 Observations:
-- 84 of the 204 participating countries earned at least one medal, 41.2%.
+- 86 of the 204 participating countries earned at least one medal, 41.2%.
 - United States dominated earned medals.
 - Aquatics, Track & Field (aka Athletics), and Rowing presented the most opportunities to earn a medal.
 - Despite being small countries Cuba placed 14th and Jamaica placed 25th in earned medals.
-- China and Germany were the only countries to earned gold, silver, and bronze in a sport.
+
 <br></br>
 <br></br>
 
@@ -36,8 +36,6 @@ Observations:
 
 <p>This table shows countries that won the gold, silver, and bronze medals in a sport.   China dominated Badminton.  Germany dominated Canoe/Kayak.</p>
 
-![Country Dominated Sport Winning Gold, Silver, & Bronze](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/CountryWonGoldSilverBronzeInSport.png)
-
 <p> This table shows countries who won multiple medals in a sport.</p>
 
 ![Countries Won Medals in Multiple Categories in a Sport](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/CountryMultipleMedalsInSport.png)
@@ -47,8 +45,6 @@ Observations:
 ![Earliest Year Women Participated in Olympics](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/FirstYearWomenInOlympics.png
 )
 
-<p>This is a screenshot of the Google Sheets dashboard. Click on Created Beijing Summer Olympics 2008 Dashboard text under "Tasks performed" to view the dashboard. </p>
 
-![](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/2008%20Beijing%20Summer%20Olympics%20Dashboard.png)
 
 
