@@ -1,6 +1,8 @@
 # Olympics-Data-Exploration
 
-This is a Data Exploration project using Summer 2008 Olympics data.
+This is a Data Exploration project using Summer 2008 Olympics data.  Medals won by athletes.
+
+<p>This analysis counts multiple medals for a team whereas the International Olympic Committee (IOC) counts only counts 1 medal for a team.  Therefore the numbers in this analysis are higher than the IOC numbers. </p>
 
 - Oracle Live SQL Olympics database.  Oracle Database 19c.
 - Olym.olym_medals_view. 29215 records.
