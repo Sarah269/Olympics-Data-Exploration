@@ -45,6 +45,10 @@ This is a Data Exploration project using Summer 2008 Olympics data.  Medals won 
 ![Earliest Year Women Participated in Olympics](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/FirstYearWomenInOlympics.png
 )
 
+### Data Visualization using SAS
+
+![Pie Chart](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/SAS/Proc_gchart_Pie.png)
+
 ### Results/Findings
 - 86 of the 204 participating countries earned at least one medal, 41.2%.
 - United States dominated earned medals.
