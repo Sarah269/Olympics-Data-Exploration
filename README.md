@@ -4,6 +4,8 @@ This is a Data Exploration project using Summer 2008 Olympics data.  Medals won 
 
 <p>This analysis counts multiple medals for a team whereas the International Olympic Committee (IOC) counts only counts 1 medal for a team.  Therefore the numbers in this analysis are higher than the IOC numbers. </p>
 
+![Dashboard](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/BeijingOlympicsDashboard.png)
+
 ### Data Source
 - Oracle Live SQL Olympics database.  Oracle Database 19c.
 - Olym.olym_medals_view. 29215 records.
@@ -22,8 +24,6 @@ This is a Data Exploration project using Summer 2008 Olympics data.  Medals won 
 - Extracted data for import into SAS Studio.
 - [Generated Graphs & Macro using SAS Studio](https://github.com/Sarah269/Olympics-Data-Exploration/tree/main/SAS)
 - [Created Beijing Summer Olympics 2008 Medal Winners Dashboard.](https://public.tableau.com/views/BeijingSummerOlympics2008/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
-
-<br></br>
 
 ### Exploratory Data Analysis
 <p>This table shows the country that received the most medals in the 2008 Beijing Olympics.  The United States received the most medals.</p>
