@@ -4,13 +4,17 @@ This is a Data Exploration project using Summer 2008 Olympics data.  Medals won 
 
 <p>This analysis counts multiple medals for a team whereas the International Olympic Committee (IOC) counts only counts 1 medal for a team.  Therefore the numbers in this analysis are higher than the IOC numbers. </p>
 
+### Data Source
 - Oracle Live SQL Olympics database.  Oracle Database 19c.
 - Olym.olym_medals_view. 29215 records.
 - Olym.world_population.  215 records.
 - View has data from 1896 to 2008 Olympics
 - Focused on 2008 Summer Olympics. 2042 records
 
-Tasks performed:
+### Tools
+- Oracle Live SQL, SAS, Tableau
+
+### Data Preparation
 - Data Exploration using Oracle Live SQL
    - [Data Exploration SQL](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/Olympics_2008.txt)
    - [Table creation SQL](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/Olympics2008_AddData.txt)
@@ -19,15 +23,9 @@ Tasks performed:
 - [Generated Graphs & Macro using SAS Studio](https://github.com/Sarah269/Olympics-Data-Exploration/tree/main/SAS)
 - [Created Beijing Summer Olympics 2008 Medal Winners Dashboard.](https://public.tableau.com/views/BeijingSummerOlympics2008/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
 
-Observations:
-- 86 of the 204 participating countries earned at least one medal, 41.2%.
-- United States dominated earned medals.
-- Aquatics, Track & Field (aka Athletics), and Rowing presented the most opportunities to earn a medal.
-- Despite being small countries Cuba placed 14th and Jamaica placed 25th in earned medals.
-
-<br></br>
 <br></br>
 
+### Exploratory Data Analysis
 <p>This table shows the country that received the most medals in the 2008 Beijing Olympics.  The United States received the most medals.</p>
 
 ![Country with Most Medals](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/CountryMostMedals.png)
@@ -47,6 +45,10 @@ Observations:
 ![Earliest Year Women Participated in Olympics](https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/FirstYearWomenInOlympics.png
 )
 
-
+### Results/Findings
+- 86 of the 204 participating countries earned at least one medal, 41.2%.
+- United States dominated earned medals.
+- Aquatics, Track & Field (aka Athletics), and Rowing presented the most opportunities to earn a medal.
+- Despite being small countries Cuba placed 14th and Jamaica placed 25th in earned medals.
 
 
