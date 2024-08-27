@@ -31,5 +31,9 @@
 ## Proc sgplot: Scatter Plot
 <img src="https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/SAS/Proc_sgplot_ScatterPlot.png" height="400" />
 
-## Macro Generated 
-<img src="https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/SAS/SAS%20Macro%20Report.png" height="400" />
+## SAS Macro
+<p float="left">
+<img src="https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/SAS/Beijing%20Macro.png" width="49%" />
+ 
+<img src="https://github.com/Sarah269/Olympics-Data-Exploration/blob/main/SAS/SAS%20Macro%20Report.png" width="49%" />
+</p>
