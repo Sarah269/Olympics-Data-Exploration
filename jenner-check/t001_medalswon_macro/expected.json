@@ -1,0 +1,16 @@
+{
+  "_captured_at": "2026-07-27T05:31:51Z",
+  "_captured_run_id": "r_4e8d29c53d99400f8875f77025742904",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: Read 41 rows from DATALINES.",
+    "NOTE: Macro variable CTRY_NM = United States",
+    "NOTE: Macro variable CTRY_NM = Australia",
+    "MPRINT(MEDALSWON):   proc freq data=mylib.olym_2008_medals;",
+    "MPRINT(MEDALSWON):   tables sport*gender /nosparse;"
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "output_contains": ["Table of sport by gender", "country_code=USA", "country_code=AUS"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}
