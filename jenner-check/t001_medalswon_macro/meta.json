@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_medalswon_macro",
+  "source_file": "SAS/Olympics 2008 SAS Macro.sas",
+  "source_blob_sha": "de68b3308cbaa6f01a05c20c5ffb92931ad0a844",
+  "source_commit": "515cfab435f713cea0b71c60ea9e1d2e73e018fd",
+  "notes": "Author's %medalswon(ctry_cd) macro, verbatim: PROC SQL SELECTs the country name for an IOC code INTO a macro variable, then PROC FREQ cross-tabulates sport*gender (WHERE country_code, BY country_code, /nosparse) for that country; invoked with USA and AUS under OPTIONS MPRINT. The only adaptation makes the bundle self-contained: the repo's Oracle->SAS Studio step read SAS/Olym_medals2.csv via PROC IMPORT from an absolute SAS Studio path (/home/u63413844/DataAnalysis), so that load is replaced by an inline DATA step whose DATALINES are a curated 41-row extract of the repo's own SAS/Olym_medals2.csv (USA & AUS across Aquatics/Athletics/Basketball/Rowing/Gymnastics/Softball, plus a few CHN/GBR rows). Macro logic, PROC SQL, and PROC FREQ options are unchanged; %medalswon(USA)->United States and %medalswon(AUS)->Australia both resolve and print the sport-by-gender table."
+}
